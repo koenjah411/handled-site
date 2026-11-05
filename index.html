@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handled – Everyday problems, solved for you</title>
+<meta name="description" content="Handled takes the everyday jobs you don't have time for: paperwork, tech trouble, writing, design and money-saving help.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- "Handled" is a working name. Search and replace it once you pick your own. -->
+<header class="top">
+  <a class="logo" href="#top">Handled</a>
+  <nav id="nav" aria-label="Main">
+    <a href="#services">Services</a><a href="#about">About</a><a href="#books">Books</a><a href="#pricing">Pricing</a><a href="#blog">Blog</a><a href="#faq">FAQ</a>
+    <a class="btn small" href="#contact">Get help</a>
+  </nav>
+  <button class="cartbtn" id="cartOpen" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">Menu</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <h1>Got a problem you don't have time to fix? Hand it over.</h1>
+  <p>Forms to fill, devices that won't work, letters to write, covers to design, ways to stretch your money. Tell us what's stuck and we'll sort it.</p>
+  <div class="row"><a class="btn" href="#contact">Describe my problem</a><a class="btn ghost" href="#services">See what we fix</a></div>
+  <ul class="ticks"><li>Plain-language answers</li><li>Fixed prices, agreed first</li><li>Every age welcome</li></ul>
+</section>
+
+<section id="services" class="wrap">
+  <h2>What we can take off your plate</h2>
+  <div class="grid" id="serviceGrid"></div>
+</section>
+
+<section id="about" class="wrap split">
+  <div>
+    <h2>About</h2>
+    <p>Handled was started by author and designer Phillip Carlo Daniels, who got tired of watching good people lose evenings to problems that take an expert twenty minutes.</p>
+    <p>Write here your own story: who you are, where you work from, and why you do this. Real detail builds trust faster than polish.</p>
+  </div>
+  <ol class="steps">
+    <li><b>Tell us the problem.</b> A short message is enough.</li>
+    <li><b>Get a clear price.</b> You approve before we start.</li>
+    <li><b>Relax.</b> We fix it and show you what we did.</li>
+  </ol>
+</section>
+
+<section id="books" class="wrap">
+  <h2>Books by Phillip Carlo Daniels</h2>
+  <p class="lead">Buy on Amazon Kindle, or add to your cart to buy direct.</p>
+  <div class="grid books" id="bookGrid"></div>
+</section>
+
+<section id="testimonials" class="wrap">
+  <h2>What people say</h2>
+  <!-- PLACEHOLDERS: replace with real, permitted client quotes before launch. -->
+  <div class="grid three" id="quotes"></div>
+</section>
+
+<section id="pricing" class="wrap">
+  <h2>Simple pricing</h2>
+  <p class="lead">Placeholder prices. Edit them in index.html.</p>
+  <div class="grid three">
+    <article class="plan"><h3>Quick fix</h3><p class="price">R150</p><ul><li>One small problem</li><li>Reply within 48 hours</li><li>Step-by-step notes</li></ul><a class="btn ghost" href="#contact" data-plan="Quick fix">Choose Quick fix</a></article>
+    <article class="plan best"><h3>Full solve</h3><p class="price">R450</p><ul><li>One bigger problem, done for you</li><li>Priority reply within 24 hours</li><li>One round of changes</li></ul><a class="btn" href="#contact" data-plan="Full solve">Choose Full solve</a></article>
+    <article class="plan"><h3>Monthly helper</h3><p class="price">R900<span>/month</span></p><ul><li>Up to five small jobs a month</li><li>Same-day replies on weekdays</li><li>Cancel any time</li></ul><a class="btn ghost" href="#contact" data-plan="Monthly helper">Choose Monthly helper</a></article>
+  </div>
+</section>
+
+<section id="blog" class="wrap">
+  <h2>Blog: ways to earn and save</h2>
+  <p class="lead">Some links below are affiliate links. If you sign up through them we may earn a commission, at no cost to you. Earnings from these sites are small, so treat them as pocket money, not a salary.</p>
+  <div class="grid three" id="posts"></div>
+</section>
+
+<section id="faq" class="wrap narrow">
+  <h2>Questions</h2>
+  <details><summary>What kind of problems can you help with?</summary><p>Paperwork, tech trouble, writing, book and cover design, and money-saving advice. If it's not on the list, ask. If we can't do it we'll say so and point you elsewhere.</p></details>
+  <details><summary>How do I pay?</summary><p>Card or PayPal, bank transfer (EFT) or crypto. You'll see the options at checkout.</p></details>
+  <details><summary>Will I know the price before you start?</summary><p>Yes. You approve a fixed price before any work begins.</p></details>
+  <details><summary>How do I get a book I bought direct?</summary><p>After payment is confirmed we email your file. If you'd rather read on a Kindle, use the Amazon button.</p></details>
+  <details><summary>Is my information private?</summary><p>We only use what you share to solve your problem, and we never sell it.</p></details>
+</section>
+
+<section id="contact" class="wrap split">
+  <div>
+    <h2>Tell us what's stuck</h2>
+    <p>Fill in the form and we'll reply with a price and a plan.</p>
+    <p><a id="mailLink" href="#"></a></p>
+  </div>
+  <form id="contactForm" novalidate>
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+    <label>Package<select name="plan"><option>Not sure yet</option><option>Quick fix</option><option>Full solve</option><option>Monthly helper</option></select></label>
+    <label>What's the problem?<textarea name="msg" rows="4" required></textarea></label>
+    <button class="btn" type="submit">Send my request</button>
+    <p id="formMsg" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer><p>© <span id="yr"></span> Handled. <a href="#top">Back to top</a></p></footer>
+
+<aside id="drawer" class="drawer" aria-hidden="true" aria-label="Cart">
+  <div class="dhead"><h2>Your cart</h2><button id="cartClose" aria-label="Close cart">Close</button></div>
+  <ul id="cartList"></ul>
+  <p class="total">Total: <b id="cartTotal">$0.00</b></p>
+  <div id="pay" hidden>
+    <h3>Choose how to pay</h3>
+    <div class="paygrid">
+      <a class="btn" id="payPaypal" target="_blank" rel="noopener">PayPal / card</a>
+      <button class="btn ghost" data-pay="eft">Bank transfer</button>
+      <button class="btn ghost" data-pay="crypto">Crypto</button>
+    </div>
+    <div id="payInfo"></div>
+  </div>
+  <button class="btn" id="checkout">Checkout</button>
+</aside>
+<div id="scrim" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>

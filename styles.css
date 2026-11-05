@@ -1,0 +1,74 @@
+:root{--bg:#f2f6f4;--ink:#132320;--green:#0d4a42;--mint:#d5e8e1;--gold:#f0b429;--line:#c4d6cf;--white:#fff;--r:14px}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1b19;--ink:#e8f0ed;--green:#7fd1bf;--mint:#17302b;--line:#2b4741;--white:#162724}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Literata,Georgia,serif}
+h1,h2,h3,.logo,.btn,nav a,summary,.price{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;font-weight:800;letter-spacing:-.02em;max-width:18ch;margin:0 0 1rem}
+h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:700;margin:0 0 .6rem;letter-spacing:-.01em}
+h3{margin:.2rem 0 .4rem;font-size:1.2rem}
+a{color:var(--green)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:1rem;padding:.7rem 1.2rem;background:var(--bg);border-bottom:2px solid var(--green)}
+.logo{font-weight:800;font-size:1.4rem;text-decoration:none;color:var(--green);margin-right:auto}
+nav{display:flex;align-items:center;gap:1.1rem}
+nav a{text-decoration:none;color:var(--ink);font-weight:500}
+nav a:hover{color:var(--green);text-decoration:underline}
+.burger{display:none}
+.cartbtn,.burger,.dhead button{font:600 .95rem "Bricolage Grotesque",sans-serif;background:none;color:var(--ink);border:2px solid var(--green);border-radius:99px;padding:.35rem .9rem;cursor:pointer}
+.cartbtn span{background:var(--gold);color:#132320;border-radius:99px;padding:0 .5rem;margin-left:.2rem}
+.btn{display:inline-block;background:var(--green);color:var(--bg);border:2px solid var(--green);padding:.7rem 1.4rem;border-radius:99px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.small{padding:.4rem 1rem}
+.wrap{max-width:1080px;margin:0 auto;padding:4rem 1.2rem}
+.narrow{max-width:760px}
+.lead{max-width:65ch;color:inherit;opacity:.85}
+.hero{max-width:1080px;margin:0 auto;padding:4.5rem 1.2rem 3rem}
+.hero p{max-width:52ch;font-size:1.2rem}
+.row{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.5rem 0}
+.ticks{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;font-weight:600}
+.ticks li::before{content:"✓ ";color:var(--green)}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:1.4rem}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card,.plan,.book,.quote,.post{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem}
+.card{border-left:6px solid var(--gold)}
+.card p,.post p{margin:.2rem 0 0;font-size:.97rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.steps{margin:0;padding-left:1.2rem;display:grid;gap:1rem;background:var(--mint);border-radius:var(--r);padding:1.4rem 1.4rem 1.4rem 2.6rem}
+.book{display:flex;flex-direction:column;gap:.5rem}
+.cover{aspect-ratio:2/3;border-radius:8px;background:var(--green);color:var(--bg);display:grid;place-items:center;text-align:center;padding:1rem;font:700 1.15rem "Bricolage Grotesque",sans-serif}
+.book .btn{width:100%;text-align:center;padding:.5rem}
+.book small{opacity:.8}
+.plan.best{border:3px solid var(--green)}
+.price{font-size:2.3rem;font-weight:800;margin:.2rem 0}
+.price span{font-size:1rem;font-weight:500}
+.plan ul{padding-left:1.1rem;margin:0 0 1.2rem}
+.quote p{margin:0 0 .6rem;font-style:italic}
+.post a.btn{margin-top:.8rem}
+details{border-bottom:1px solid var(--line);padding:.9rem 0}
+summary{cursor:pointer;font-weight:700;font-size:1.1rem}
+details p{margin:.6rem 0 0}
+form{display:grid;gap:1rem;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem}
+label{display:grid;gap:.3rem;font:600 .95rem "Bricolage Grotesque",sans-serif}
+input,select,textarea{font:inherit;padding:.6rem;border:2px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+input:invalid:not(:placeholder-shown){border-color:#c0392b}
+footer{text-align:center;padding:2rem 1rem;border-top:1px solid var(--line)}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--bg);z-index:40;padding:1.2rem;overflow:auto;transform:translateX(100%);transition:transform .25s;border-left:3px solid var(--green);display:flex;flex-direction:column;gap:.8rem}
+.drawer.open{transform:none}
+.dhead{display:flex;justify-content:space-between;align-items:center}
+#cartList{list-style:none;padding:0;margin:0}
+#cartList li{display:flex;justify-content:space-between;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
+#cartList button{border:0;background:none;color:var(--green);cursor:pointer;text-decoration:underline;font:inherit}
+.paygrid{display:grid;gap:.5rem}
+#payInfo{font-size:.95rem;word-break:break-all;background:var(--mint);border-radius:8px;padding:.8rem;margin-top:.6rem}
+#payInfo:empty{display:none}
+#scrim{position:fixed;inset:0;background:#0008;z-index:30}
+@media (max-width:760px){
+ .burger{display:block}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg);padding:1rem 1.2rem;border-bottom:2px solid var(--green)}
+ nav.open{display:flex}
+ .split{grid-template-columns:1fr;gap:1.6rem}
+ .wrap{padding:3rem 1.1rem}
+}
