@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wordwright – Writing, editing and design for authors and professionals</title>
+<meta name="description" content="Editing, cover design, KDP formatting, CVs, pitches and proposals from a published author.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- "Wordwright" is a working name. Search and replace it once you pick your own. -->
+<header class="top">
+  <a class="logo" href="#top">Wordwright</a>
+  <nav id="nav" aria-label="Main">
+    <a href="#services">Services</a><a href="#about">About</a><a href="#books">Books</a><a href="#pricing">Pricing</a><a href="#blog">Blog</a><a href="#faq">FAQ</a>
+    <a class="btn small" href="#contact">Get help</a>
+  </nav>
+  <button class="cartbtn" id="cartOpen" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">Menu</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <h1>Words that work for you.</h1>
+  <p>Whether you are finishing a book or chasing a job, we edit, design and write the pieces that get you noticed.</p>
+  <div class="row"><a class="btn" href="#contact">Tell me about your project</a><a class="btn ghost" href="#services">See services</a></div>
+  <ul class="ticks"><li>Written by a published author</li><li>Fixed prices, agreed first</li><li>First-time writers welcome</li></ul>
+</section>
+
+<section id="services" class="wrap">
+  <h2>Services</h2>
+  <div class="grid" id="serviceGrid"></div>
+</section>
+
+<section id="about" class="wrap split">
+  <div>
+    <h2>About</h2>
+    <p>Wordwright is run by author and designer Phillip Carlo Daniels, who has self-published several Kindle titles and designs his own covers. He now helps other writers, job-seekers and small businesses turn rough ideas into clear, polished words.</p>
+    <p>Add here where you are based and one line about why you do this. Real detail builds trust.</p>
+  </div>
+  <ol class="steps">
+    <li><b>Tell me your project.</b> A short message is enough.</li>
+    <li><b>Get a clear price.</b> You approve before we start.</li>
+    <li><b>Relax.</b> You get the finished work and one round of changes.</li>
+  </ol>
+</section>
+
+<section id="books" class="wrap">
+  <h2>Books by Phillip Carlo Daniels</h2>
+  <p class="lead">Buy on Amazon Kindle, or add to your cart to buy direct.</p>
+  <div class="grid books" id="bookGrid"></div>
+</section>
+
+<section id="testimonials" class="wrap">
+  <h2>What people say</h2>
+  <!-- PLACEHOLDERS: replace with real, permitted client quotes before launch. -->
+  <div class="grid three" id="quotes"></div>
+</section>
+
+<section id="pricing" class="wrap">
+  <h2>Simple pricing</h2>
+  <p class="lead">Starting prices. Edit them in index.html. Large projects are quoted first.</p>
+  <div class="grid three">
+    <article class="plan"><h3>Quick polish</h3><p class="price">R150</p><ul><li>CV, cover letter or blurb</li><li>Reply within 48 hours</li><li>One round of changes</li></ul><a class="btn ghost" href="#contact" data-plan="Quick polish">Choose Quick polish</a></article>
+    <article class="plan best"><h3>Full project</h3><p class="price">R450</p><ul><li>Pitch, proposal or cover design</li><li>Priority reply within 24 hours</li><li>Two rounds of changes</li></ul><a class="btn" href="#contact" data-plan="Full project">Choose Full project</a></article>
+    <article class="plan"><h3>Book package</h3><p class="price">Quoted</p><ul><li>Editing, cover and KDP formatting</li><li>Price agreed before work starts</li><li>Ongoing support to launch</li></ul><a class="btn ghost" href="#contact" data-plan="Book package">Ask for a quote</a></article>
+  </div>
+</section>
+
+<section id="blog" class="wrap">
+  <h2>Blog: side income for writers</h2>
+  <p class="lead">Some links below are affiliate links. If you sign up through them we may earn a commission, at no cost to you. Earnings from these sites are small, so treat them as pocket money, not a salary.</p>
+  <div class="grid three" id="posts"></div>
+</section>
+
+<section id="faq" class="wrap narrow">
+  <h2>Questions</h2>
+  <details><summary>What do you offer?</summary><p>For authors: editing, proofreading, Kindle cover design, KDP formatting, blurbs, bios and publisher outreach. For professionals and small businesses: CVs, cover letters, elevator pitches, presentation scripts and business proposals.</p></details>
+  <details><summary>How do I pay?</summary><p>Card or PayPal, bank transfer (EFT) or crypto. You'll see the options at checkout.</p></details>
+  <details><summary>Do you write legal agreements?</summary><p>No. I do not draft contracts or give legal advice. For anything legally binding, please use an attorney.</p></details>
+  <details><summary>Will I know the price before you start?</summary><p>Yes. You approve a fixed price before any work begins.</p></details>
+  <details><summary>How do I get a book I bought direct?</summary><p>After payment is confirmed we email your file. If you'd rather read on a Kindle, use the Amazon button.</p></details>
+  <details><summary>Is my work private?</summary><p>Your manuscript and documents are used only for your project and are never shared or sold.</p></details>
+</section>
+
+<section id="contact" class="wrap split">
+  <div>
+    <h2>Tell me about your project</h2>
+    <p>Fill in the form and I will reply with a price and a plan.</p>
+    <p><a id="mailLink" href="#"></a></p>
+  </div>
+  <form id="contactForm" novalidate>
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+    <label>Package<select name="plan"><option>Not sure yet</option><option>Quick polish</option><option>Full project</option><option>Book package</option></select></label>
+    <label>What do you need?<textarea name="msg" rows="4" required></textarea></label>
+    <button class="btn" type="submit">Send my request</button>
+    <p id="formMsg" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer><p>© <span id="yr"></span> Wordwright. <a href="#top">Back to top</a></p></footer>
+
+<aside id="drawer" class="drawer" aria-hidden="true" aria-label="Cart">
+  <div class="dhead"><h2>Your cart</h2><button id="cartClose" aria-label="Close cart">Close</button></div>
+  <ul id="cartList"></ul>
+  <p class="total">Total: <b id="cartTotal">$0.00</b></p>
+  <div id="pay" hidden>
+    <h3>Choose how to pay</h3>
+    <div class="paygrid">
+      <a class="btn" id="payPaypal" target="_blank" rel="noopener">PayPal / card</a>
+      <button class="btn ghost" data-pay="eft">Bank transfer</button>
+      <button class="btn ghost" data-pay="crypto">Crypto</button>
+    </div>
+    <div id="payInfo"></div>
+  </div>
+  <button class="btn" id="checkout">Checkout</button>
+</aside>
+<div id="scrim" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
